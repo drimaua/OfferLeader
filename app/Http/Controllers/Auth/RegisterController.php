@@ -69,10 +69,15 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+
         // Set default role as User on registarion
         $role = Role::where('name', 'User')->first();
         $user->roles()->attach($role);
-        //
+
+        if($user->id==1){//First user get admin role
+            $role = Role::where('name', 'Admin')->first();
+            $user->roles()->attach($role);
+        }
 
         return $user;
     }

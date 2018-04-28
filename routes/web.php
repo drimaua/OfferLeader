@@ -42,3 +42,7 @@ Route::get('/orders', 'OrderController@indexAll');
 Route::post('/orders/{order}/reject', 'OrderController@reject');
 Route::post('/orders/{order}/approve', 'OrderController@approve');
 
+Route::get('/statistics', 'StatisticsController@index');
+Route::get('/statistics/{user}', 'StatisticsController@show');
+
+Route::get('/my_statistics', 'StatisticsController@index_my');

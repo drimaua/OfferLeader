@@ -23,7 +23,10 @@
                                                     <p>{{$role}}</p>
                                                 @endforeach
                                             </td>
-                                            <td><a href="/admin/{{$id}}" class="btn btn-info" style="padding: 6px;">Roles</a></td>
+                                            <td>
+                                                <a href="/admin/{{$id}}" class="btn btn-info" style="padding: 6px;">Roles</a>
+                                                <a href="/statistics/{{$id}}" class="btn btn-success" style="padding: 6px;">Stat</a>
+                                            </td>
                                         </tr>
                                     @endforeach
                                     </tbody>

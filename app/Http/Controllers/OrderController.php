@@ -45,7 +45,7 @@ class OrderController extends Controller
     {
         if (Auth::check() && Auth::user()->isUser()) {
             $cards = Auth::user()->cards()->where('cards.id', '=', request('card'))->get();
-            if($cards){
+            if(count($cards)){
                 $order = new Order();
                 $order->user_id = Auth::user()->id;
                 $order->card_id = request('card');

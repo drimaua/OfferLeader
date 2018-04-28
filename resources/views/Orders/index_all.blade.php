@@ -9,7 +9,7 @@
                         @if(count($orders))
                             <div class="table-responsive">
                                 <table class="table">
-                                    <thead><tr><th>№</th><th>Card</th><th>User</th><th>Order sum</th><th>Status</th><th>Manage</th></tr></thead>
+                                    <thead><tr><th>№</th><th>Card (current balance)</th><th>User</th><th>Order sum</th><th>Status</th><th>Manage</th></tr></thead>
                                     <tbody>
                                     @foreach($orders as $id=>$order)
                                         <tr>

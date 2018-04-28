@@ -17,7 +17,7 @@ class CreateOrdersTable extends Migration
             $table->increments('id');
             $table->integer('card_id')->unsigned()->references('id')->on('cards');
             $table->integer('user_id')->unsigned()->references('id')->on('users');
-            $table->boolean('writeoff');
+            $table->boolean('write_off');
             $table->float('order_sum');
             $table->boolean('examined')->default(false);
             $table->boolean('approved')->default(false);
