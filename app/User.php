@@ -48,4 +48,15 @@ class User extends Authenticatable
     public function isAdministrator() {
         return $this->roles()->where('name', 'Admin')->exists();
     }
+
+    public function cards()
+    {
+        return $this->hasMany(Card::class)->where('deleted','=','0');
+    }
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
+
 }

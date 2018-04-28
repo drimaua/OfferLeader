@@ -46,10 +46,13 @@
                     @else
                         <li><a class="nav-link" href="{{ url('/home') }}">Home</a></li>
                         @if(Auth::user()->isUser())
-                            <li><a class="nav-link" href="{{ url('/user') }}">User</a></li>
+                            <li><a class="nav-link" href="{{ url('/my_cards') }}">My cards</a></li>
+                            <li><a class="nav-link" href="{{ url('/my_orders') }}">My orders</a></li>
                         @endif
                         @if(Auth::user()->isAdministrator())
                             <li><a class="nav-link" href="{{ url('/admin') }}">Admin</a></li>
+                            <li><a class="nav-link" href="{{ url('/cards') }}">Cards</a></li>
+                            <li><a class="nav-link" href="{{ url('/orders') }}">Orders</a></li>
                         @endif
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
